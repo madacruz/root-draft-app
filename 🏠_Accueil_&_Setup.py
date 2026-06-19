@@ -20,27 +20,35 @@ st.set_page_config(
 )
 
 st.title("🏠 Accueil & Setup")
-st.caption("Création d'une partie, tirage des factions et ordre du tour.")
+st.caption("Préparation, draft et suivi des parties de Root.")
 
 st.markdown(
     """
-Cette application permet de préparer une partie de **Root** entre amis.
+Bienvenue dans **Root Draft App**.
 
-Elle sert à :
+Cette application permet de préparer rapidement une partie de **Root** entre amis, 
+avec un tirage partagé et stable entre tous les joueurs.
 
-- tirer au sort les factions disponibles ;
-- garantir que la première faction tirée est bien une faction **Militant** ;
-- tirer au sort l'ordre du tour ;
+Fonctionnalités principales :
+
+- créer une partie avec les joueurs, extensions et maps disponibles ;
+- tirer au sort l’ordre du tour ;
 - faire choisir la map par le premier joueur ;
-- gérer la draft des factions dans l'ordre inverse de l'ordre du tour ;
-- conserver l'état de la partie pour que chaque joueur voie les choix déjà effectués ;
-- enregistrer ensuite les scores et les résultats ;
-- suivre les statistiques des joueurs et des factions.
+- tirer automatiquement les factions disponibles pour la draft ;
+- garantir que la première faction tirée est une faction **Militant** ;
+- permettre une partie personnalisée avec sélection manuelle des factions ;
+- permettre un ordre du tour personnalisé ;
+- faire drafter les factions en ordre inverse de l’ordre du tour ;
+- conserver l’état de la partie pour que chaque joueur voie les choix déjà faits ;
+- enregistrer les résultats après la partie ;
+- consulter les statistiques par joueur et par faction.
+Les factions restent masquées jusqu’au choix de la map, afin que le premier joueur choisisse la map sans connaître le pool de draft.
 """
 )
 
 st.info(
-    "Après création, va dans la page `🎲 Draft` du menu de gauche et sélectionne la partie créée."
+    "Commence par configurer la partie ci-dessous. Une fois la partie créée, "
+    "va dans la page `🎲 Draft` pour lancer la sélection des maps et factions."
 )
 
 expansions_df = storage.read_df(SHEET_CONFIG_EXPANSIONS)
