@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Google credentials
+credentials.json
+service_account.json
+service-account.json
+google-service-account.json
+
+# OS / editors
+.DS_Store
+.vscode/
